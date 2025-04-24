@@ -1,0 +1,23 @@
+{
+    "name": "xfirst/route-trie",
+    "description": "Sistema de enrutamiento basado en Trie, adaptable a Laravel, Symfony y CakePHP.",
+    "type": "library",
+    "autoload": {
+      "psr-4": {
+        "Modulo\\": "Export/"
+      }
+    },
+    "require": {
+      "php": "^8.1"
+    },
+    "extra": {
+      "laravel": {
+        "providers": [
+          "Modulo\\Laravel\\ServicesProvider"
+        ]
+      }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+  }
+  
