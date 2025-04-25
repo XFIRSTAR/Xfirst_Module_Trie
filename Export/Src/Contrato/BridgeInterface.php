@@ -1,5 +1,5 @@
 <?php
-namespace Modulo\Export\Contrato;
+namespace Modulo\Export\Src\Contrato;
 
 interface BridgeInterface {
     public function registerRoutes(): void;
