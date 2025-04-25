@@ -8,8 +8,8 @@ Sistema de rutas optimizado basado en Trie, adaptable a múltiples frameworks PH
 
 **Laravel:**
 
-use RouteTrieAdapter\Bridge\Laravel\RouteTrieLaravelAdapter;
-use RouteTrieAdapter\Trie\RouteTrie;
+use Modulo\Export\Src\Laravel\LaravelServicesProvider;
+use Modulo\Export\Src\Core\Trie as RouteTrie;
 
 $trie = new RouteTrie('api');
 $trie->insert('GET', '/usuarios', [App\Http\Controllers\UsuarioController::class, 'index']);
@@ -19,24 +19,24 @@ $adapter->mount($trie); // Registra las rutas en Laravel
 
 **Symfony:**
 
-use RouteTrieAdapter\Bridge\Symfony\RouteTrieSymfonyAdapter;
-use RouteTrieAdapter\Trie\RouteTrie;
+use Modulo\Export\Src\Symfony\TrieSymfonyAdapter;
+use Modulo\Export\Src\Core\Trie as RouteTrie;
 
 $trie = new RouteTrie('web');
 $trie->insert('GET', '/productos/{id}', [ProductoController::class, 'ver']);
 
-$adapter = new RouteTrieSymfonyAdapter();
+$adapter = new TrieSymfonyAdapter();
 $routes = $adapter->mount($trie); // Devuelve RouteCollection
 
 **CakePHP:**
 
-use RouteTrieAdapter\Bridge\CakePHP\RouteTrieCakeAdapter;
-use RouteTrieAdapter\Trie\RouteTrie;
+use Modulo\Export\Src\CakePHP\TrieCakeAdapter;
+use Modulo\Export\Src\Core\Trie as RouteTrie;
 
 $trie = new RouteTrie('admin');
 $trie->insert('POST', '/usuarios/crear', ['Usuarios', 'crear']);
 
-$adapter = new RouteTrieCakeAdapter();
+$adapter = new TrieCakeAdapter();
 $adapter->mount($trie); // Usa Router::connect() internamente
 
 ## ⚙️ Cache Contextual Dinámico
