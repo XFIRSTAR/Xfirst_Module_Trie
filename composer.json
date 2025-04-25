@@ -8,6 +8,9 @@
           "email": "services@xfirstars.com"
         }
       ],
+    {
+      "license": "MIT"
+    }
     "autoload": {
       "psr-4": {
         "Modulo\\": "Export/"
