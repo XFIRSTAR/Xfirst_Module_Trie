@@ -1,0 +1,3 @@
+trie_routes:
+    resource: .
+    type: trie

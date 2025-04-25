@@ -1,0 +1,4 @@
+services:
+    # App\Routing\TrieRouteLoader:
+    Modulo\Export\Src\Symfony\TrieRouteLoader:
+        tags: ['routing.loader']
