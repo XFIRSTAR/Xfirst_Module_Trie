@@ -1,5 +1,5 @@
 {
-    "name": "vendor/xfirst-route-trie",
+    "name": "xfirst/router-trie",
     "description": "Sistema de enrutamiento basado en Trie, adaptable a Laravel, Symfony y CakePHP.",
     "type": "library",
     "authors": [
